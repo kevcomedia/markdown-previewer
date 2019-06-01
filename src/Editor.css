@@ -1,0 +1,15 @@
+.editor {
+  --border-color: #fdca40;
+  background: #fefaed;
+  color: #080708;
+  font-family: var(--font-stack-monospace);
+  line-height: 1.4;
+  margin: 0 1.5em 0 0;
+  resize: none;
+  transition: box-shadow ease 0.1s;
+}
+
+.editor:focus {
+  outline: none;
+  box-shadow: 0 0 0.2em 0.2em var(--border-color);
+}

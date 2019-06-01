@@ -1,4 +1,5 @@
 import React from 'react';
+import './Editor.css';
 
 function Editor(props) {
   const handleChange = (event) => {

@@ -1,5 +1,6 @@
 import React from 'react';
 import marked from 'marked';
+import './Preview.css';
 
 function Preview(props) {
   const renderedMarkdown = marked(props.textToPreview, {
@@ -9,7 +10,7 @@ function Preview(props) {
 
   return (
     <div
-      className="preview"
+      className={props.textToPreview ? 'preview' : 'preview preview_is-empty'}
       dangerouslySetInnerHTML={{ __html: renderedMarkdown }}
     />
   );

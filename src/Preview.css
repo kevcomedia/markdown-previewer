@@ -1,0 +1,36 @@
+.preview {
+  --border-color: #3772ff;
+  background: #ecf2ff;
+  max-height: 100%;
+  overflow-y: auto;
+}
+
+.preview code,
+.preview pre {
+  background: #fcebe6;
+  color: #df2935;
+  font-family: var(--font-stack-monospace);
+}
+
+.preview pre {
+  padding: 0.5em;
+}
+
+.prevew blockquote {
+  border-left: 0.5em solid var(--border-color);
+  padding: 0.5em 0.2em;
+  margin: 0;
+  background: #dae5ff;
+}
+
+.preview_is-empty {
+  align-items: center;
+  color: #6d98ff;
+  display: flex;
+  justify-content: center;
+}
+.preview_is-empty::after {
+  content: 'Rendered markdown appears here.';
+  text-align: center;
+  font-size: 1.5em;
+}
