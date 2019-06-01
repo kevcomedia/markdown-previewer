@@ -12,6 +12,7 @@ function Editor(props) {
       value={props.rawText}
       placeholder="Type markdown here"
       onChange={handleChange}
+      aria-label="Enter markdown here"
     />
   );
 }
