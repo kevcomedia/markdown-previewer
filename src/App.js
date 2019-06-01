@@ -1,24 +1,16 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import Editor from './Editor';
+import Preview from './Preview';
+import initialMarkdown from './initialMarkdown';
 import './App.css';
 
 function App() {
+  const [rawText, setRawText] = useState(initialMarkdown);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Editor rawText={rawText} onChange={setRawText} />
+      <Preview textToPreview={rawText} />
     </div>
   );
 }
